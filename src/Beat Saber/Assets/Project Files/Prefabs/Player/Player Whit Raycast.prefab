@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 2266002117304231633}
   - component: {fileID: 666403914901290082}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Whit Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +617,7 @@ Transform:
   m_GameObject: {fileID: 3457357258443542446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2172381, y: -0.4690091, z: -0.7873639}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

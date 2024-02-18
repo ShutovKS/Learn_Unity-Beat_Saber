@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     
     [field: Space, SerializeField] public GameData GameData { get; private set; }
 
+    private bool _isDead;
     private int _score;
     private int _health;
 
@@ -55,10 +58,20 @@ public class GameManager : MonoBehaviour
         _health--;
         OnHealthChanged?.Invoke(_health);
 
-        if (_health <= 0)
+        if (_health <= 0 && !_isDead)
         {
-            OnGameOver?.Invoke();
+            StartCoroutine(GameOver());
         }
+    }
+
+    private IEnumerator GameOver()
+    {
+        _isDead = true;
+        OnGameOver?.Invoke();
+        
+        yield return new WaitForSeconds(5);
+        
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void InitializedSingleton()

@@ -865,8 +865,8 @@ MonoBehaviour:
   isDebug: 1
   healthOnStart: 3
   <GameData>k__BackingField:
-    <CubSpeed>k__BackingField: 0
-    <CubSpawnerTime>k__BackingField: 0
+    <CubSpeed>k__BackingField: 4
+    <CubSpawnerTime>k__BackingField: 1
 --- !u!1 &870627232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,10 +1672,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 666403914901290082, guid: aebc1986bd045d94db745454aefb64aa, type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2266002117304231633, guid: aebc1986bd045d94db745454aefb64aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
