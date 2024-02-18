@@ -10,10 +10,11 @@ public class GameManager : MonoBehaviour
     public Action OnGameOver;
     public event Action<int> OnScoreChanged;
     public event Action<int> OnHealthChanged;
-    
+
     [SerializeField] private bool isDebug;
     [SerializeField] private int healthOnStart = 3;
-    
+    [SerializeField] private AudioSource audioSource;
+
     [field: Space, SerializeField] public GameData GameData { get; private set; }
 
     private bool _isDead;
@@ -45,6 +46,11 @@ public class GameManager : MonoBehaviour
     {
         _health = healthOnStart;
         OnHealthChanged?.Invoke(_health);
+        
+        if (audioSource != null)
+        {
+            StartCoroutine(AudioClipOnComplete());
+        }
     }
 
     public void OnHitCorrectSaber()
@@ -68,10 +74,19 @@ public class GameManager : MonoBehaviour
     {
         _isDead = true;
         OnGameOver?.Invoke();
-        
+
         yield return new WaitForSeconds(0.5f);
-        
+
         SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator AudioClipOnComplete()
+    {
+        var clipLength = audioSource.clip.length;
+
+        yield return new WaitForSeconds(clipLength);
+        
+        StartCoroutine(GameOver());
     }
 
     private void InitializedSingleton()
