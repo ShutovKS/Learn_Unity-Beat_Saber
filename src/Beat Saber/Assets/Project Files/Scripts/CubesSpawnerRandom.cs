@@ -7,15 +7,14 @@ public class CubesSpawnerRandom : MonoBehaviour
 
     [Space, SerializeField] private Transform[] spawnPoints;
     
+    [Space, SerializeField] private float beat = 1f;
+    
     private bool _isHandler = true;
-    private float _beat;
     private float _timer;
 
     private void Start()
     {
         GameManager.Instance.OnGameOver += () => _isHandler = false;
-        
-        _beat = GameManager.Instance.GameData.CubSpawnerTime;
         
         if (cubesPrefabs.Length == 0)
         {
@@ -30,7 +29,7 @@ public class CubesSpawnerRandom : MonoBehaviour
 
     private void Update()
     {
-        if (_isHandler && _timer > _beat)
+        if (_isHandler && _timer > beat)
         {
             var rotation = 90 * Random.Range(0, 4);
             var cubePrefab = cubesPrefabs[Random.Range(0, cubesPrefabs.Length)];
@@ -38,7 +37,7 @@ public class CubesSpawnerRandom : MonoBehaviour
             var instantiate = Instantiate(cubePrefab, spawnPointPosition, Quaternion.identity);
             instantiate.transform.Rotate(0, 0, rotation);
             
-            _timer -= _beat;
+            _timer -= beat;
         }
 
         _timer += Time.deltaTime;

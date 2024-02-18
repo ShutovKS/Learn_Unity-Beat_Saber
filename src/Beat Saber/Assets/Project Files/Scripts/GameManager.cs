@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(5);
         
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 
     private void InitializedSingleton()
