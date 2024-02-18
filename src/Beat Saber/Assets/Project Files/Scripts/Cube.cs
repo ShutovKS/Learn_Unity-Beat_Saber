@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
@@ -12,15 +12,8 @@ public class Cube : MonoBehaviour
 
     private void Start()
     {
-        var rotationZ = 90 * Random.Range(0, 4);
-
-        transform.Rotate(0, 0, rotationZ);
-    }
-
-    public void SetUpActions(Action onHitDestroy, Action onHitCorrectSaber)
-    {
-        _onHitDestroy = onHitDestroy;
-        _onHitCorrectSaber = onHitCorrectSaber;
+        _onHitDestroy = GameManager.Instance.OnHitDestroy;
+        _onHitCorrectSaber = GameManager.Instance.OnHitCorrectSaber;
     }
 
     private void Update()
@@ -34,19 +27,21 @@ public class Cube : MonoBehaviour
         {
             if (saber.SideType == sideType)
             {
-                _onHitCorrectSaber?.Invoke();
-                Destroy(gameObject);
+                Destroy(_onHitCorrectSaber);
+                return;
             }
-            else
-            {
-                _onHitDestroy?.Invoke();
-                Destroy(gameObject);
-            }
+
+            Destroy(_onHitDestroy);
         }
         else if (other.TryGetComponent<Destroyer>(out _))
         {
-            _onHitDestroy?.Invoke();
-            Destroy(gameObject);
+            Destroy(_onHitDestroy);
         }
+    }
+    
+    private void Destroy(Action action)
+    {
+        action?.Invoke();
+        Object.Destroy(gameObject);
     }
 }
