@@ -1,17 +1,22 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CubesSpawnerRandom : MonoBehaviour
 {
     [SerializeField] private GameObject[] cubesPrefabs;
 
     [Space, SerializeField] private Transform[] spawnPoints;
-
-    [Space, SerializeField] private float beat = 0.5f;
-
+    
+    private bool _isHandler = true;
+    private float _beat;
     private float _timer;
 
     private void Start()
     {
+        GameManager.Instance.OnGameOver += () => _isHandler = false;
+        
+        _beat = GameManager.Instance.GameData.CubSpawnerTime;
+        
         if (cubesPrefabs.Length == 0)
         {
             Debug.LogError("Cubes prefabs are not assigned!");
@@ -25,7 +30,7 @@ public class CubesSpawnerRandom : MonoBehaviour
 
     private void Update()
     {
-        if (_timer > beat)
+        if (_isHandler && _timer > _beat)
         {
             var rotation = 90 * Random.Range(0, 4);
             var cubePrefab = cubesPrefabs[Random.Range(0, cubesPrefabs.Length)];
@@ -33,7 +38,7 @@ public class CubesSpawnerRandom : MonoBehaviour
             var instantiate = Instantiate(cubePrefab, spawnPointPosition, Quaternion.identity);
             instantiate.transform.Rotate(0, 0, rotation);
             
-            _timer -= beat;
+            _timer -= _beat;
         }
 
         _timer += Time.deltaTime;

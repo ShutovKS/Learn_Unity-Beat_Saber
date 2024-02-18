@@ -4,21 +4,22 @@ using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
     [SerializeField] private SideType sideType;
 
+    private float _speed;
     private Action _onHitDestroy;
     private Action _onHitCorrectSaber;
 
     private void Start()
     {
+        _speed = GameManager.Instance.GameData.CubSpeed;
         _onHitDestroy = GameManager.Instance.OnHitDestroy;
         _onHitCorrectSaber = GameManager.Instance.OnHitCorrectSaber;
     }
 
     private void Update()
     {
-        transform.Translate(Vector3.back * (speed * Time.deltaTime));
+        transform.Translate(Vector3.back * (_speed * Time.deltaTime));
     }
 
     private void OnTriggerEnter(Collider other)
