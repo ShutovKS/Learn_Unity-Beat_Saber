@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         _isDead = true;
         OnGameOver?.Invoke();
         
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2f);
         
         SceneManager.LoadScene(0);
     }
