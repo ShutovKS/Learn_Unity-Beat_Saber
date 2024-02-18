@@ -15,7 +15,7 @@ MonoBehaviour:
   debugViews:
     m_Enabled: 1
     m_Settings:
-      mode: 3
+      mode: 0
       depth:
         scale: 1
       motionVectors:
