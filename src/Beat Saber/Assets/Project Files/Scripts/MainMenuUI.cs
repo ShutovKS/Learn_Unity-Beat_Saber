@@ -4,7 +4,9 @@ using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
+    [Header("Ссылка на кнопку для запуска игры")]
     [SerializeField] private Button startButton;
+    [Header("Ссылка на кнопку для выхода из игры")]
     [SerializeField] private Button quitButton;
     
     private void Start()

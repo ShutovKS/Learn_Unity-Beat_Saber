@@ -985,7 +985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738464602}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 1, z: 17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -994,7 +994,7 @@ Transform:
   - {fileID: 1427713167}
   - {fileID: 1847418132}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &738464604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,11 +1060,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6356b461f848ecb5565ffb1bab5428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebug: 1
-  healthOnStart: 10
   audioSource: {fileID: 327141349}
   <GameData>k__BackingField:
+    <IsDebug>k__BackingField: 0
     <CubSpeed>k__BackingField: 4
+    <HealthOnStart>k__BackingField: 3
 --- !u!1 &870627232
 GameObject:
   m_ObjectHideFlags: 0

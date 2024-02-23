@@ -4,6 +4,7 @@ using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
+    [Header("Тип куба")] 
     [SerializeField] private SideType sideType;
 
     private float _speed;
@@ -19,7 +20,7 @@ public class Cube : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.back * (_speed * Time.deltaTime));
+        transform.Translate(Vector3.forward * (_speed * Time.deltaTime), Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,7 +40,7 @@ public class Cube : MonoBehaviour
             Destroy(_onHitDestroy);
         }
     }
-    
+
     private void Destroy(Action action)
     {
         action?.Invoke();

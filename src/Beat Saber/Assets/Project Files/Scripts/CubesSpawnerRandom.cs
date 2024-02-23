@@ -3,10 +3,13 @@ using Random = UnityEngine.Random;
 
 public class CubesSpawnerRandom : MonoBehaviour
 {
+    [Header("Экземпляры появляющихся кубов.")]
     [SerializeField] private GameObject[] cubesPrefabs;
 
+    [Header("Ссылки на объекты из которых будут появляться кубы.")]
     [Space, SerializeField] private Transform[] spawnPoints;
     
+    [Header("Частота появления кубов.")]
     [Space, SerializeField] private float beat = 1f;
     
     private bool _isHandler = true;
@@ -18,12 +21,12 @@ public class CubesSpawnerRandom : MonoBehaviour
         
         if (cubesPrefabs.Length == 0)
         {
-            Debug.LogError("Cubes prefabs are not assigned!");
+            Debug.LogError("Префабы кубов не назначены!");
         }
 
         if (spawnPoints.Length == 0)
         {
-            Debug.LogError("Spawn points are not assigned!");
+            Debug.LogError("Точки появления не назначаются!");
         }
     }
 
@@ -33,8 +36,8 @@ public class CubesSpawnerRandom : MonoBehaviour
         {
             var rotation = 90 * Random.Range(0, 4);
             var cubePrefab = cubesPrefabs[Random.Range(0, cubesPrefabs.Length)];
-            var spawnPointPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-            var instantiate = Instantiate(cubePrefab, spawnPointPosition, Quaternion.identity);
+            var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            var instantiate = Instantiate(cubePrefab, spawnPoint.position, spawnPoint.rotation);
             instantiate.transform.Rotate(0, 0, rotation);
             
             _timer -= beat;
