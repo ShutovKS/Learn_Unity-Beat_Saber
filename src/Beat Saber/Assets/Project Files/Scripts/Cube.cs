@@ -4,6 +4,7 @@ using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
+    [Header("Тип куба")]
     [SerializeField] private SideType sideType;
 
     private float _speed;

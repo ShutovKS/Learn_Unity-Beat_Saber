@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour
     public event Action<int> OnScoreChanged;
     public event Action<int> OnHealthChanged;
 
-    [SerializeField] private bool isDebug;
-    [SerializeField] private int healthOnStart = 3;
+    [Header("Ссылка на источник звука")]
     [SerializeField] private AudioSource audioSource;
 
     [field: Space, SerializeField] public GameData GameData { get; private set; }
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
 
         OnScoreChanged += score =>
         {
-            if (isDebug)
+            if (GameData.IsDebug)
             {
                 Debug.Log($"Score: {score}");
             }
@@ -35,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         OnHealthChanged += health =>
         {
-            if (isDebug)
+            if (GameData.IsDebug)
             {
                 Debug.Log($"Health: {health}");
             }
@@ -44,8 +43,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _health = healthOnStart;
+        _health = GameData.HealthOnStart;
         OnHealthChanged?.Invoke(_health);
+
+        _score = 0;
+        OnScoreChanged?.Invoke(_score);
         
         if (audioSource != null)
         {
