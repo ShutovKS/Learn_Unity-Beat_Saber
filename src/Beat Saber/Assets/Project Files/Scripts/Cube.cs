@@ -7,9 +7,6 @@ public class Cube : MonoBehaviour
     [Header("Тип куба")] 
     [SerializeField] private SideType sideType;
 
-    [Header("Направление куба")] 
-    [SerializeField, Range(0, 4, order = 1)] private int directionMovement;
-
     private float _speed;
     private Action _onHitDestroy;
     private Action _onHitCorrectSaber;
@@ -19,15 +16,11 @@ public class Cube : MonoBehaviour
         _speed = GameManager.Instance.GameData.CubSpeed;
         _onHitDestroy = GameManager.Instance.OnHitDestroy;
         _onHitCorrectSaber = GameManager.Instance.OnHitCorrectSaber;
-
-        var rotation = transform.rotation;
-        rotation = Quaternion.Euler(rotation.x, directionMovement, rotation.z);
-        transform.rotation = rotation;
     }
 
     private void Update()
     {
-        transform.Translate(Vector3.back * (_speed * Time.deltaTime));
+        transform.Translate(Vector3.forward * (_speed * Time.deltaTime), Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)

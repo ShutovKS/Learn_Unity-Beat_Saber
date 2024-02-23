@@ -36,8 +36,8 @@ public class CubesSpawnerRandom : MonoBehaviour
         {
             var rotation = 90 * Random.Range(0, 4);
             var cubePrefab = cubesPrefabs[Random.Range(0, cubesPrefabs.Length)];
-            var spawnPointPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-            var instantiate = Instantiate(cubePrefab, spawnPointPosition, Quaternion.identity);
+            var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            var instantiate = Instantiate(cubePrefab, spawnPoint.position, spawnPoint.rotation);
             instantiate.transform.Rotate(0, 0, rotation);
             
             _timer -= beat;
