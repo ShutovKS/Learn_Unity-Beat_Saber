@@ -4,8 +4,11 @@ using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
-    [Header("Тип куба")]
+    [Header("Тип куба")] 
     [SerializeField] private SideType sideType;
+
+    [Header("Направление куба")] 
+    [SerializeField, Range(0, 4, order = 1)] private int directionMovement;
 
     private float _speed;
     private Action _onHitDestroy;
@@ -16,6 +19,10 @@ public class Cube : MonoBehaviour
         _speed = GameManager.Instance.GameData.CubSpeed;
         _onHitDestroy = GameManager.Instance.OnHitDestroy;
         _onHitCorrectSaber = GameManager.Instance.OnHitCorrectSaber;
+
+        var rotation = transform.rotation;
+        rotation = Quaternion.Euler(rotation.x, directionMovement, rotation.z);
+        transform.rotation = rotation;
     }
 
     private void Update()
@@ -40,7 +47,7 @@ public class Cube : MonoBehaviour
             Destroy(_onHitDestroy);
         }
     }
-    
+
     private void Destroy(Action action)
     {
         action?.Invoke();
