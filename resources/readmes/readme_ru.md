@@ -69,6 +69,16 @@ Rus | [Eng][link_on_readme_eng]
 
    - доработка проекта по своему усмотрению.
 
+### Примечание
+
+Изменение игровых параметров:
+
+- количество жизней - ``Game manager`` - Health On Start;
+- скорость движения кубов - ``Game manager`` - Game Data - Cub Spead;
+- частота спавна кубов - ``Cubes Spawner Random`` - Beat;
+- тип меча - ``Saber`` - Side Type;
+- тип куба - ``Cube`` - Side Type;
+
 <!-- Links -->
 
 [releases]: https://github.com/ShutovKS/Learn_Unity-Beat_Saber/releases
