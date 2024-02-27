@@ -89,6 +89,10 @@ Rus | [Eng][link_on_readme_eng]
 
 ### Пример итогового проекта
 
+![Screenshot](../../resources/images/game_example/screenshot_1.png)
+![Screenshot](../../resources/images/game_example/screenshot_2.png)
+![Screenshot](../../resources/images/game_example/screenshot_3.png)
+
 <!-- Links -->
 
 [releases]: https://github.com/ShutovKS/Learn_Unity-Beat_Saber/releases
