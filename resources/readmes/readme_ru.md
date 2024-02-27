@@ -83,7 +83,7 @@ Rus | [Eng][link_on_readme_eng]
 - скорость движения кубов - ``Game manager`` - Game Data - Cub Spead;
 - частота спавна кубов - ``Cubes Spawner Random`` - Beat;
 - тип меча - ``Saber`` - Side Type;
-- тип куба - ``Cube`` - Side Type;
+- тип куба - ``Cube`` - Side Type.
 
 ## Скриншоты
 
@@ -92,6 +92,25 @@ Rus | [Eng][link_on_readme_eng]
 ![Screenshot](../../resources/images/game_example/screenshot_1.png)
 ![Screenshot](../../resources/images/game_example/screenshot_2.png)
 ![Screenshot](../../resources/images/game_example/screenshot_3.png)
+
+### Некоторые проектов обучающихся
+
+#### Проект 1
+
+![Screenshot](../../resources/images/student_games/game_1/screenshot_1.png)
+![Screenshot](../../resources/images/student_games/game_1/screenshot_2.png)
+![Screenshot](../../resources/images/student_games/game_1/screenshot_3.png)
+
+#### Проект 2
+
+![Screenshot](../../resources/images/student_games/game_2/screenshot_1.png)
+![Screenshot](../../resources/images/student_games/game_2/screenshot_2.png)
+
+#### Проект 3
+
+![Screenshot](../../resources/images/student_games/game_3/screenshot_1.png)
+![Screenshot](../../resources/images/student_games/game_3/screenshot_2.png)
+![Screenshot](../../resources/images/student_games/game_3/screenshot_2.png)
 
 <!-- Links -->
 
