@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/!Beat Saber/Scenes/Gameplay.unity
     guid: 53080292d14be7a4a8a6246ecf02a6d8
   - enabled: 1
-    path: Assets/!Beat Saber/Sample/0-MainMenu.unity
+    path: Assets/Sample/0-MainMenu.unity
     guid: 01d9dad9545a63d498b2fea63e9d47e4
   - enabled: 1
-    path: Assets/!Beat Saber/Sample/2-Gameplay_SpawnRandom.unity
+    path: Assets/Sample/2-Gameplay_SpawnRandom.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 720a803f48a4b80419747dd47e36f964, type: 2}

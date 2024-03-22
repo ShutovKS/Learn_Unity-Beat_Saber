@@ -2632,19 +2632,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4725137041095499208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4998424612755909117}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: fc9bcf894e0d6ab4b91bd1d83b13a0d3, type: 2}
 --- !u!4 &4795823277413040517
 Transform:
   m_ObjectHideFlags: 0
@@ -2838,7 +2825,6 @@ GameObject:
   - component: {fileID: 7446776204538088360}
   - component: {fileID: 8184409528226052526}
   - component: {fileID: 1052338336383976555}
-  - component: {fileID: 4725137041095499208}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
