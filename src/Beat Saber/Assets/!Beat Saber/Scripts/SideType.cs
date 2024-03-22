@@ -1,6 +1,9 @@
-public enum SideType
+namespace Beat_Saber.Scripts
 {
-    Any,
-    Left,
-    Right,
+    public enum SideType
+    {
+        Any,
+        Left,
+        Right,
+    }
 }

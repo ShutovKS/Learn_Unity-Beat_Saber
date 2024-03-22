@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class Saber : MonoBehaviour
+namespace Beat_Saber.Scripts
 {
-    [field: SerializeField, Header("Тип кубов которые должны резаться")] 
-    public SideType SideType { get; private set; }
+    public class Saber : MonoBehaviour
+    {
+        [field: SerializeField, Header("Тип кубов которые должны резаться")] 
+        public SideType SideType { get; private set; }
+    }
 }
