@@ -287,6 +287,8 @@ GameObject:
   - component: {fileID: 1498854994748525652}
   - component: {fileID: 8471015095516696741}
   - component: {fileID: 7713032870230454110}
+  - component: {fileID: 2627829661746862991}
+  - component: {fileID: 8707563430746693757}
   m_Layer: 5
   m_Name: Statistics Canvas
   m_TagString: Untagged
@@ -364,7 +366,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8471015095516696741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +403,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &2627829661746862991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841574851738988447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96a981de08d1cf4db22f7fe878ddcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 2335753262419292001}
+  scoreText: {fileID: 6600560699331981414}
+--- !u!114 &8707563430746693757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841574851738988447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96a981de08d1cf4db22f7fe878ddcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 2335753262419292001}
+  scoreText: {fileID: 6600560699331981414}
 --- !u!1 &7366508537154309754
 GameObject:
   m_ObjectHideFlags: 0

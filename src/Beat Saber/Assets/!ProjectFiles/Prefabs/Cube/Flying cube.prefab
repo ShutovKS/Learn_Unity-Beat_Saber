@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 397ae6290037ff944a7fda8e15c5f499, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,8 +96,8 @@ GameObject:
   - component: {fileID: 56114227452124635}
   - component: {fileID: 7213412412944068012}
   - component: {fileID: 3552588748899764370}
-  - component: {fileID: 3899018190221689536}
   - component: {fileID: -3967911387239609724}
+  - component: {fileID: 3899018190221689536}
   - component: {fileID: -1974196298633766076}
   m_Layer: 0
   m_Name: Flying cube
@@ -174,6 +174,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3967911387239609724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472518947618668921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b056787a60e9e4a49b9f4b41b0406c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sideType: 0
 --- !u!65 &3899018190221689536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -195,20 +208,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3967911387239609724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8472518947618668921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b056787a60e9e4a49b9f4b41b0406c99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sideType: 0
-  directionMovement: 0
 --- !u!54 &-1974196298633766076
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5666637907893026866, guid: 2f21ac3a0a6d9174f9da42f1e9d7f3d0, type: 3}
       propertyPath: <SideType>k__BackingField
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 298609044223378019, guid: 2f21ac3a0a6d9174f9da42f1e9d7f3d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -19,10 +19,6 @@ PrefabInstance:
     - target: {fileID: 1865129699288550127, guid: 2f21ac3a0a6d9174f9da42f1e9d7f3d0, type: 3}
       propertyPath: m_Name
       value: Sword - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 1956792014604839212, guid: 2f21ac3a0a6d9174f9da42f1e9d7f3d0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5512947350232068819, guid: 2f21ac3a0a6d9174f9da42f1e9d7f3d0, type: 3}
       propertyPath: m_LocalPosition.x
