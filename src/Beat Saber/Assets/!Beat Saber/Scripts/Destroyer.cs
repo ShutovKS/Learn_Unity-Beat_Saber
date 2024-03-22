@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class Destroyer : MonoBehaviour
+namespace Beat_Saber.Scripts
 {
+    public class Destroyer : MonoBehaviour
+    {
+    }
 }

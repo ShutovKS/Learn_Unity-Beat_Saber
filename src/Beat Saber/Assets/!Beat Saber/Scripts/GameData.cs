@@ -1,15 +1,18 @@
 using System;
 using UnityEngine;
 
-[Serializable]
-public class GameData
+namespace Beat_Saber.Scripts
 {
-    [field: SerializeField, Header("Режим отладки")]
-    public bool IsDebug { get; private set; }
+    [Serializable]
+    public class GameData
+    {
+        [field: SerializeField, Header("Режим отладки")]
+        public bool IsDebug { get; private set; }
 
-    [field: SerializeField, Header("Скорость движения кубов")]
-    public float CubSpeed { get; private set; }
+        [field: SerializeField, Header("Скорость движения кубов")]
+        public float CubSpeed { get; private set; }
 
-    [field: SerializeField, Header("Скорость движения кубов")]
-    public int HealthOnStart { get; private set; } = 3;
+        [field: SerializeField, Header("Скорость движения кубов")]
+        public int HealthOnStart { get; private set; } = 3;
+    }
 }
