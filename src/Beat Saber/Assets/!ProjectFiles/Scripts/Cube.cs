@@ -4,8 +4,7 @@ using Object = UnityEngine.Object;
 
 public class Cube : MonoBehaviour
 {
-    [Header("Тип куба")] 
-    [SerializeField] private SideType sideType;
+    [SerializeField, Header("Тип куба")] private SideType sideType;
 
     private float _speed;
     private Action _onHitDestroy;
@@ -27,7 +26,9 @@ public class Cube : MonoBehaviour
     {
         if (other.TryGetComponent<Saber>(out var saber))
         {
-            if (saber.SideType == sideType)
+            if (saber.SideType == sideType ||
+                SideType.Any == saber.SideType ||
+                SideType.Any == sideType)
             {
                 Destroy(_onHitCorrectSaber);
                 return;
