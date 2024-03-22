@@ -4,12 +4,12 @@ using UnityEngine;
 [Serializable]
 public class GameData
 {
-    [field: SerializeField] public bool IsDebug { get; private set; }
-    
-    [Header("Скорость движения кубов")]
-    [field: SerializeField] public float CubSpeed { get; private set; }
+    [field: SerializeField, Header("Режим отладки")]
+    public bool IsDebug { get; private set; }
 
-    [Header("Скорость движения кубов")]
-    [field: SerializeField] public int HealthOnStart { get; private set; } = 3;
+    [field: SerializeField, Header("Скорость движения кубов")]
+    public float CubSpeed { get; private set; }
 
+    [field: SerializeField, Header("Скорость движения кубов")]
+    public int HealthOnStart { get; private set; } = 3;
 }

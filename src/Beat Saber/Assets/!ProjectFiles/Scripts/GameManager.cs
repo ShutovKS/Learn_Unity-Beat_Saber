@@ -11,10 +11,11 @@ public class GameManager : MonoBehaviour
     public event Action<int> OnScoreChanged;
     public event Action<int> OnHealthChanged;
 
-    [Header("Ссылка на источник звука")]
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField, Header("Ссылка на источник звука")] 
+    private AudioSource audioSource;
 
-    [field: Space, SerializeField] public GameData GameData { get; private set; }
+    [field: Space, SerializeField, Header("Игровые данные")] 
+    public GameData GameData { get; private set; }
 
     private bool _isDead;
     private int _score;
